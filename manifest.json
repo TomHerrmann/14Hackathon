@@ -9,6 +9,6 @@
   },
   "permissions": ["activeTab"],
   "icons": {
-    "128": "-----------------"
+    
   }
 }
