@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#now {
+  display: flex;
+  flex-direction: column;
+  top: 30%;
+}
+
+#time {
+  display: flex;
+}
+
+#date {
+  display: flex;
+}
+
+#weather {
+  display: flex;
+}
+
+#news {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  background-color: green;
+  height: 50px;
+}
