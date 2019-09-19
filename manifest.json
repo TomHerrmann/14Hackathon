@@ -1,5 +1,5 @@
 {
-  "name": "New Tab Extension",
+  "name": "Day Tab",
   "version": "1.0",
   "description": "TBD",
   "manifest_version": 2,
@@ -9,6 +9,6 @@
   },
   "permissions": ["activeTab", "geolocation"],
   "icons": {
-    
+    "128": "icon-for-weather-29.png"
   }
 }
