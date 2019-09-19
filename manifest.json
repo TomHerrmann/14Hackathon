@@ -1,7 +1,7 @@
 {
   "name": "Day Tab",
   "version": "1.0",
-  "description": "TBD",
+  "description": "Opens a new tab with everything you need for your day.",
   "manifest_version": 2,
   "incognito": "split",
   "chrome_url_overrides": {
@@ -9,6 +9,6 @@
   },
   "permissions": ["activeTab", "geolocation"],
   "icons": {
-    "128": "icon-for-weather-29.png"
+    "128": "icon128.png"
   }
 }
