@@ -39,10 +39,41 @@ document.addEventListener('DOMContentLoaded', event => {
     return `${hour}:${minutes}<span>${suffix}</span>`;
   };
 
+  const timePercent = () => {
+    const start = new Date();
+    start.setHours(9, 0, 0, 0);
+
+    const end = new Date();
+    end.setHours(8, 0, 0, 0);
+
+    const today = new Date();
+
+    const q = Math.abs(today-start);
+    const d = Math.abs(end-start);
+
+    const percent = Math.round((q/d)*100);
+
+    if( percent < 100){
+      return `${percent} <span>%</span>`;
+    } else {
+      return 'Keep Coding!';
+    }
+  }
+
   //TIME
   //Date.now - look it up
   const time = document.querySelector('#time');
+  const nowDiv = document.querySelector('#now');
   time.innerHTML = time12Hour(hour, minutes);
+
+  const timePercentDiv = document.querySelector('#percent');
+  timePercentDiv.innerHTML = timePercent();
+  
+  nowDiv.addEventListener('dblclick', function (e) {
+    nowDiv.classList.toggle('show-percent');
+  });
+
+
 
   //DATE
   //see above

@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: rgba(0,0,0, 0.2);
 }
 
 #main {
@@ -21,7 +22,7 @@ body {
   flex-direction: column;
 }
 
-#time {
+#time, #percent {
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -30,11 +31,23 @@ body {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
-#time span {
+#time span, #percent span {
   font-size: 50px;
   align-self: flex-end;
   padding-bottom: 23px;
   text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+}
+
+#now #percent{
+    display: none;
+}
+
+#now.show-percent #percent{
+    display: flex;
+}
+
+#now.show-percent #time{
+    display: none;
 }
 
 #date {
