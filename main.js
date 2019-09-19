@@ -62,4 +62,5 @@ document.addEventListener('DOMContentLoaded', event => {
 
   //BACKGROUND
   // look into this
+  console.log(breakingNews);
 });
