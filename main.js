@@ -48,17 +48,17 @@ document.addEventListener('DOMContentLoaded', event => {
 
     const today = new Date();
 
-    const q = Math.abs(today-start);
-    const d = Math.abs(end-start);
+    const q = Math.abs(today - start);
+    const d = Math.abs(end - start);
 
-    const percent = Math.round((q/d)*100);
+    const percent = Math.round((q / d) * 100);
 
-    if( percent < 100){
+    if (percent < 100) {
       return `${percent} <span>%</span>`;
     } else {
       return 'Keep Coding!';
     }
-  }
+  };
 
   //TIME
   //Date.now - look it up
@@ -68,12 +68,10 @@ document.addEventListener('DOMContentLoaded', event => {
 
   const timePercentDiv = document.querySelector('#percent');
   timePercentDiv.innerHTML = timePercent();
-  
-  nowDiv.addEventListener('dblclick', function (e) {
+
+  nowDiv.addEventListener('dblclick', function(e) {
     nowDiv.classList.toggle('show-percent');
   });
-
-
 
   //DATE
   //see above
@@ -88,9 +86,8 @@ document.addEventListener('DOMContentLoaded', event => {
   //NEWS
   // get api
   // create scroll across the footer area
-  const news = document.querySelector('#news');
-  const newsImage = breakingNews;
+  //const news = document.querySelector('#news');
+  //const newsImage = breakingNews;
   //BACKGROUND
   // look into this
-  console.log(breakingNews);
 });

@@ -7,14 +7,33 @@ const newsAPI =
 
 let breakingNews;
 
+const num1 = Math.floor(Math.random() * 19);
+const num2 = Math.floor(Math.random() * 19);
+const num3 = Math.floor(Math.random() * 19);
+
 async function getTheNews() {
-  await fetch(newsAPI)
+  breakingNews = await fetch(newsAPI)
     .then(function(response) {
       return response.json();
     })
     .then(data => data.articles)
     .then(data => {
-      breakingNews = data;
+      const news = document.getElementById('news');
+      const newsImage1 = document.createElement('img');
+      newsImage.src = data[num1]['urlToImage'];
+      news.appendChild(newsImage1);
+    })
+    .then(data => {
+      const news = document.getElementById('news');
+      const newsImage2 = document.createElement('img');
+      newsImage.src = data[num2]['urlToImage'];
+      news.appendChild(newsImage2);
+    })
+    .then(data => {
+      const news = document.getElementById('news');
+      const newsImage3 = document.createElement('img');
+      newsImage.src = data[num3]['urlToImage'];
+      news.appendChild(newsImage3);
     });
 }
 
