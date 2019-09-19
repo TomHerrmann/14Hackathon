@@ -92,45 +92,45 @@ document.addEventListener('DOMContentLoaded', event => {
 
 // Comment out before presentation
 
-const num1 = Math.floor(Math.random() * 19);
-const num2 = Math.floor(Math.random() * 19);
-const num3 = Math.floor(Math.random() * 19);
+// const num1 = Math.floor(Math.random() * 19);
+// const num2 = Math.floor(Math.random() * 19);
+// const num3 = Math.floor(Math.random() * 19);
 
-const makeNewsSection = articlesArr => {
-  //dedlaring variable set to image div
-  const news = document.querySelector('#news');
-  //setting image 1
-  const article1 = document.querySelector('article1');
-  const newsImage1 = document.createElement('img');
-  newsImage1.src = articlesArr[num1]['urlToImage'];
-  article1.appendChild(newsImage1);
-  //image 2
-  const article2 = document.querySelector('article1');
-  const newsImage2 = document.createElement('img');
-  newsImage2.src = articlesArr[num2]['urlToImage'];
-  article2.appendChild(newsImage2);
-  //image 3
-  const article3 = document.querySelector('article1');
-  const newsImage3 = document.createElement('img');
-  newsImage3.src = articlesArr[num3]['urlToImage'];
-  article3.appendChild(newsImage3);
-};
+// const makeNewsSection = articlesArr => {
+//   //dedlaring variable set to image div
+//   const news = document.querySelector('#news');
+//   //setting image 1
+//   const article1 = document.querySelector('article1');
+//   const newsImage1 = document.createElement('img');
+//   newsImage1.src = articlesArr[num1]['urlToImage'];
+//   article1.appendChild(newsImage1);
+//   //image 2
+//   const article2 = document.querySelector('article1');
+//   const newsImage2 = document.createElement('img');
+//   newsImage2.src = articlesArr[num2]['urlToImage'];
+//   article2.appendChild(newsImage2);
+//   //image 3
+//   const article3 = document.querySelector('article1');
+//   const newsImage3 = document.createElement('img');
+//   newsImage3.src = articlesArr[num3]['urlToImage'];
+//   article3.appendChild(newsImage3);
+// };
 
-// news API key
+// // news API key
 
-const breakingNews = [];
+// const breakingNews = [];
 
-const newsAPI =
-  'https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=27670d367cd8498ea7d02d5201f9de1c';
+// const newsAPI =
+//   'https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=27670d367cd8498ea7d02d5201f9de1c';
 
-fetch(newsAPI)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(data =>
-    data.articles.forEach(elem => {
-      breakingNews.push(elem);
-    })
-  );
+// fetch(newsAPI)
+//   .then(function(response) {
+//     return response.json();
+//   })
+//   .then(data =>
+//     data.articles.forEach(elem => {
+//       breakingNews.push(elem);
+//     })
+//   );
 
-console.log('newsArr', breakingNews);
+// console.log('newsArr', breakingNews);

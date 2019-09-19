@@ -1,25 +1,28 @@
-// news API key
-/*
 const newsAPI =
-  'https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=27670d367cd8498ea7d02d5201f9de1c';
+'https://newsapi.org/v2/top-headlines?' +
+'country=us&' +
+'apiKey=27670d367cd8498ea7d02d5201f9de1c';
 
-const breakingNews = fetch(newsAPI)
+const newsData = fetch(newsAPI)
   .then(function(response) {
     return response.json();
   })
-  .then(elem => elem.articles);
+  .then(function(data) {
+    for (let counter=1; counter < 4; counter += 1 ){
+        
+        const newsContainer = document.getElementById('news');
 
-/*
-let breakingNews;
+        const singleNews = document.createElement('div');
+        singleNews.id = `article${counter}`
+        
+        const newsImage = document.createElement('img');
+        newsImage.src = data.articles[counter]['urlToImage'];
 
-async function getTheNews() {
-  breakingNews = await fetch(newsAPI)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(data => {
-      makeNewsSection(data.articles);
-    });
-}
+        const newsTitle = document.createElement('p');
+        newsTitle.innerHTML = data.articles[counter]['title'];
 
-console.log(breakingNews);*/
+        singleNews.appendChild(newsImage);
+        singleNews.appendChild(newsTitle);
+        newsContainer.append(singleNews);
+    }
+  }).catch(err => console.log(err));
