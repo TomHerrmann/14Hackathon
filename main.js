@@ -91,3 +91,49 @@ document.addEventListener('DOMContentLoaded', event => {
   //BACKGROUND
   // look into this
 });
+
+// Comment out before presentation
+/*
+// news API key
+
+const newsAPI =
+  'https://newsapi.org/v2/top-headlines?' +
+  'country=us&' +
+  'apiKey=27670d367cd8498ea7d02d5201f9de1c';
+
+let breakingNews;
+
+const num1 = Math.floor(Math.random() * 19);
+const num2 = Math.floor(Math.random() * 19);
+const num3 = Math.floor(Math.random() * 19);
+
+const makeNewsSection = articlesArr => {
+  //dedlaring variable set to image div
+  const news = document.querySelector('#news');
+  //setting image 1
+  const article1 = document.querySelector('article1');
+  const newsImage1 = document.createElement('img');
+  newsImage.src = data[num1]['urlToImage'];
+  article1.appendChild(newsImage1);
+  //image 2
+  const article2 = document.querySelector('article1');
+  const newsImage2 = document.createElement('img');
+  newsImage.src = data[num2]['urlToImage'];
+  article2.appendChild(newsImage2);
+  //image 3
+  const article3 = document.querySelector('article1');
+  const newsImage3 = document.createElement('img');
+  newsImage.src = data[num3]['urlToImage'];
+  article3.appendChild(newsImage3);
+};
+
+async function getTheNews() {
+  breakingNews = await fetch(newsAPI)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(data => {
+      makeNewsSection(data.articles);
+    });
+}
+*/
