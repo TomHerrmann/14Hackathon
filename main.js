@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', event => {
   };
 
   const time12Hour = (hour, minutes) => {
-    let suffix = (hour >= 12) ? 'PM' : 'AM';
-    hour = (hour > 12)? hour -12 : hour;
+    let suffix = hour >= 12 ? 'PM' : 'AM';
+    hour = hour > 12 ? hour - 12 : hour;
     if (minutes < 10) return `${hour}:0${minutes}<span>${suffix}</span>`;
     return `${hour}:${minutes}<span>${suffix}</span>`;
   };
