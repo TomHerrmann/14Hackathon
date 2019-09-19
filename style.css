@@ -8,8 +8,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: white;
-  text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
 }
 
 #main {
@@ -28,12 +26,15 @@ body {
   justify-content: center;
   margin-top: 75px;
   font-size: 161px;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 #time span {
   font-size: 50px;
   align-self: flex-end;
   padding-bottom: 23px;
+  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
 }
 
 #date {
@@ -41,6 +42,8 @@ body {
   justify-content: center;
   font-size: x-large;
   padding-top: 10px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #weather {
@@ -48,6 +51,8 @@ body {
   justify-content: center;
   margin-top: 30px;
   font-size: 67px;
+  color: white;
+  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
 }
 
 #news {
