@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', event => {
   // get api
   // create scroll across the footer area
   const news = document.querySelector('#news');
-
+  const newsImage = breakingNews;
   //BACKGROUND
   // look into this
   console.log(breakingNews);
