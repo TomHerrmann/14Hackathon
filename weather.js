@@ -6,7 +6,7 @@ const weatherData = fetch(weatherAPIURL)
     })
     .then(function(response){
         const iconID = response['weather'][0]['icon'];
-        document.getElementById('temp').innerHTML = response['main']['temp'];
+        document.getElementById('temp').innerHTML = `${Math.floor(response['main']['temp'])} F`;
 
         // Image 
         const weatherIcon = document.createElement('img');
