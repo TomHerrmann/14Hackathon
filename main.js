@@ -1,13 +1,25 @@
-//TIME
-//Date.now - look it up
+const date = Date.now();
 
-//DATE
-//see above
+document.onload = () => {
+  //TIME
+  //Date.now - look it up
+  const time = document.querySelector('#time');
+  time.append(date.toLocaleTimeString());
 
-//WEATHER
-//get from api
-//code for local area
+  //DATE
+  //see above
+  const date = document.querySelector('#date');
 
-//NEWS
-// get api
-// create scroll across the footer area
+  //WEATHER
+  //get from api
+  //code for local area
+  const weather = document.querySelector('#weather');
+
+  //NEWS
+  // get api
+  // create scroll across the footer area
+  const news = document.querySelector('#news');
+
+  //BACKGROUND
+  // look into this
+});
