@@ -32,12 +32,11 @@ document.addEventListener('DOMContentLoaded', event => {
     6: 'Saturday'
   };
 
-  const time12Hour = (h, n) => {
-    // if (h > 12) h = h - 12;
-    // else ap = 'AM';
-    // if ((h = 0)) h = 12;
-    if (n < 10) return `${h}:0${n}`;
-    return `${h}:${n}`;
+  const time12Hour = (hour, minutes) => {
+    let suffix = (hour >= 12) ? 'PM' : 'AM';
+    hour = (hour > 12)? hour -12 : hour;
+    if (minutes < 10) return `${hour}:0${minutes}<span>${suffix}</span>`;
+    return `${hour}:${minutes}<span>${suffix}</span>`;
   };
 
   //TIME
