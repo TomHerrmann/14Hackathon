@@ -1,9 +1,10 @@
-html, body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    background-position: center center;
-    background-size: cover;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-position: center center;
+  background-size: cover;
 }
 
 body {
@@ -21,11 +22,13 @@ body {
 #now {
   display: flex;
   flex-direction: column;
-  top: 30%;
 }
 
 #time {
   display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  font-size: 161px;
 }
 
 #date {
@@ -42,5 +45,5 @@ body {
   justify-content: flex-start;
   align-content: center;
   background-color: green;
-  height: 50px;
+  height: 15%;
 }
