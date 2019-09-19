@@ -7,7 +7,7 @@
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "geolocation"],
   "icons": {
     
   }

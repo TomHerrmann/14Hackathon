@@ -13,3 +13,22 @@ const weatherData = fetch(weatherAPIURL)
         weatherIcon.src = `http://openweathermap.org/img/wn/${iconID}@2x.png`;
         temp.appendChild(weatherIcon);
     });
+
+
+    console.log(navigator.geolocation.getCurrentPosition(showPosition));
+
+
+    var x = document.getElementById("temp");
+    function getLocation() {
+        console.log(navigator.geolocation);
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Unavailable.";
+        }
+    }
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude; 
+    }
