@@ -92,9 +92,26 @@ document.addEventListener('DOMContentLoaded', event => {
 
 // Comment out before presentation
 
-const num1 = Math.floor(Math.random() * 19);
-const num2 = Math.floor(Math.random() * 19);
-const num3 = Math.floor(Math.random() * 19);
+// news API key
+
+const breakingNews = [];
+
+const newsAPI =
+  'https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=27670d367cd8498ea7d02d5201f9de1c';
+
+fetch(newsAPI)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(data =>
+    data.articles.forEach(elem => {
+      breakingNews.push(elem);
+    })
+  );
+
+const num1 = Math.floor(Math.random() * breakingNews.length - 1);
+const num2 = Math.floor(Math.random() * breakingNews.length - 1);
+const num3 = Math.floor(Math.random() * breakingNews.length - 1);
 
 const makeNewsSection = articlesArr => {
   //dedlaring variable set to image div
@@ -116,21 +133,4 @@ const makeNewsSection = articlesArr => {
   article3.appendChild(newsImage3);
 };
 
-// news API key
-
-const breakingNews = [];
-
-const newsAPI =
-  'https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=27670d367cd8498ea7d02d5201f9de1c';
-
-fetch(newsAPI)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(data =>
-    data.articles.forEach(elem => {
-      breakingNews.push(elem);
-    })
-  );
-
-console.log('newsArr', breakingNews);
+console.log('bn', breakingNews);
