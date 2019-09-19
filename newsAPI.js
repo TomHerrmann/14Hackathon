@@ -1,3 +1,5 @@
+/* commented out for time
+
 const newsAPI =
 'https://newsapi.org/v2/top-headlines?' +
 'country=us&' +
@@ -26,3 +28,4 @@ const newsData = fetch(newsAPI)
         newsContainer.append(singleNews);
     }
   }).catch(err => console.log(err));
+*/

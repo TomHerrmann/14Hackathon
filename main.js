@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', event => {
 });
 
 // Comment out before presentation
+/*
 // news API key
 
 const breakingNews = [];
@@ -176,3 +177,4 @@ console.log('bn', breakingNews);
 //   );
 
 // console.log('newsArr', breakingNews);
+*/
